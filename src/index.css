@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 *{
     direction: rtl;
+    font-family: 'Lateef';
+    box-sizing: border-box;
 }
