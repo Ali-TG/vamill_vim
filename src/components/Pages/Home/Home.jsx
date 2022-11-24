@@ -2,8 +2,9 @@ import Background from './../../../assets/Background.png'
 const Home = () => {
     return(
         <div className='absolute top-0 -z-10'>
-            <div className='z-[-1]'>
+            <div>
                 <img src={Background} alt='Background'/>
+                <h1>Hello</h1>
             </div>
         </div>
     )
