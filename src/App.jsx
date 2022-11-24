@@ -11,12 +11,12 @@ const App = () => {
         <div className='min-h-screen relative flex flex-col'>
           <NavBar/>
             <Routes>
-              <Route index element={<Home/>}/>
+              <Route path='/' element={<Home/>}/>
               <Route path='/shop' element={<Shop/>}/>
               <Route path='/about' element={<About/>}/>
               <Route path='/contact' element={<Contact/>}/>
             </Routes>
-          <Footer/>
+            {/* <Footer/> */}
         </div>
     )
 };
