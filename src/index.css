@@ -8,3 +8,32 @@
     font-family: 'Lateef';
     box-sizing: border-box;
 }
+
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+}
+
+@layer components{
+    .mobile{
+        @apply md:hidden flex items-center justify-between p-4 text-white z-50 mix-blend-difference
+    }
+
+    .desktop{
+        @apply hidden md:flex md:items-center md:justify-between md:text-black md:mx-4 md:text-xl
+    }
+
+    .mobile-menu{
+        @apply  md:hidden w-full absolute top-0 pt-20 bg-white shadow-lg rounded-b-3xl text-lg z-[-1]
+    }
+}

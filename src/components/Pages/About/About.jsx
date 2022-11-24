@@ -1,9 +1,9 @@
-
-
-export default About = () => {
+const About = () => {
     return(
         <>
         
         </>
     )
 }
+
+export default About;

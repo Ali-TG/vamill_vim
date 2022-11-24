@@ -1,7 +1,9 @@
-export default Shop = () => {
+const Shop = () => {
     return(
         <>
         
         </>
     )
 }
+
+export default Shop;

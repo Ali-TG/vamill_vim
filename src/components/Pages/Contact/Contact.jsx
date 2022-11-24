@@ -1,7 +1,9 @@
-export default Contact = () => {
+const Contact = () => {
     return(
         <>
         
         </>
     )
 }
+
+export default Contact;
