@@ -1,7 +1,7 @@
 import FooterImg from './../../assets/Footer.png'
 const Footer = () => {
     return(
-        <footer className='w-full flex items-center justify-between text-white'>
+        <footer className='max-w-full relative bottom-0 flex items-center justify-between text-white'>
             <img className='w-full' src={FooterImg} alt="" />
         </footer>
     )

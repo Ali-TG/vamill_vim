@@ -1,75 +1,48 @@
 import { useState } from "react";
 import { Cross as Hamburger } from 'hamburger-react';
 import Cart from "../Pages/Cart/Cart";
-import { json, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
-const NavBar = (props) => {
-    
+const NavBar = () => {
+    const [isOpen, setOpen] = useState(false);
+    const NavItems = [
+        {name:'الصفحة الرئيسية', href:'/'},
+        {name:'المتجر', href:'/shop'},
+        {name:'من نحن', href:'/about'},
+        {name:'تواصل معنا', href:'/contact'}]
     return(
         <header>
-            <DesktopNav/>
-            <MobileNav/>
-        </header>
-    )
-}
-
-const MobileNav = () => {
-    const NavItems = [
-        {name:'الصفحة الرئيسية', href:'/', background: 'bg-home'},
-        {name:'المتجر', href:'/shop', background: 'bg-shop'},
-        {name:'من نحن', href:'/about', background: 'bg-about'},
-        {name:'تواصل معنا', href:'/contact', background: 'bg-contact'}]
-    const [isOpen, setOpen] = useState(false)
-
-    return(
-        <nav>
-            <div className='mobile'>
+            <nav>
+                <div className='mobile'>
                     <h1 className='text-4xl p-1'><a href="/">Vim</a></h1>
                     <div className='flex items-center justify-between'>
                         <Cart/>
                         <Hamburger toggled={isOpen} toggle={setOpen} rounded color={!isOpen ? '#fff' : '#000'}/>
                     </div>
                 </div>
-                <div>
+                <div className={!isOpen ? ' relative top-[-400px] transition-all ease-in duration-700' : 'relative top-12 transition-all ease-in-out duration-700'}>
                     <div className='mobile-menu'>
                         <ul className='flex flex-col items-center justify-center'>
-                            {NavItems.map((item) => {return <li className="m-4" key={item.name}><a href={item.href}>{item.name}</a></li>})}
+                            {NavItems.map((item) => {return <li className="m-6" key={item.name}><a href={item.href}>{item.name}</a></li>})}
                         </ul>
                     </div>
                 </div>
-        </nav>
-    )
-}
-
-const DesktopNav = () => {
-    const [background, setBackground] = useState('bg-home')
-    const [content, setContent] = useState(<HomeContent/>)
-    const NavItems = [
-        {name:'الصفحة الرئيسية', href:'/', background: 'bg-home', texts: <HomeContent/>},
-        {name:'المتجر', href:'/shop', background: 'bg-shop', texts: <ShopContent/>},
-        {name:'من نحن', href:'/about', background: 'bg-about', texts: <AboutContent/>},
-        {name:'تواصل معنا', href:'/contact', background: 'bg-contact', texts: <ContactForm/>}]
-
-    
-    return(
-        <nav className={`${background} w-full h-[998px] bg-center`}>
-            <div>
-                <div className='desktop'>
-                        <h1 className='text-4xl p-4'><a href="/">Vim</a></h1>
-                        <div className='flex items-center justify-between'>
-                            <ul className={'flex items-center justify-between'}>
-                                {NavItems.map((item) => {return <li key={item.name} onClick={() => setContent(item.texts)} className=' text-2xl m-6'><Link to={item.href} onClick={() => {return setBackground(item.background)}}>{item.name}</Link></li>})}
-                            </ul>
-                            <Cart/>
+                <div className="desktop">
+                    <h1 className='md:text-4xl md:p-4'><a href="/">Vim</a></h1>
+                    <div className='md:flex md:items-center md:justify-between'>
+                        <ul className={'md:flex md:items-center md:justify-between'}>
+                            {NavItems.map((item) => {return <li key={item.name} onClick={() => setContent(item.texts)} className=' text-2xl m-6'><Link to={item.href} onClick={() => {return setBackground(item.background)}}>{item.name}</Link></li>})}
+                        </ul>
+                        <Cart/>
                         </div>
                 </div>
-                {content}
-            </div>
-        </nav>
+            </nav>
+        </header>
     )
 }
+
 
 const HomeContent = () => {
     return(
