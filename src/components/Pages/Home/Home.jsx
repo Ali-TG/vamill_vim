@@ -6,9 +6,6 @@ const Home = () => {
     return(
         <div>
             <HomeBackground/>
-            <Content>
-                <Proudctstext/>
-            </Content>
             <Content/>
         </div>
     );
