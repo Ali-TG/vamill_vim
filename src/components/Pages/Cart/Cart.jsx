@@ -1,4 +1,4 @@
-import cart from '/public/static/imgaes/cart.svg'
+import cart from './public/static/imgaes/cart.svg'
 const Cart = () => {
     return(
         <div className='relative'>

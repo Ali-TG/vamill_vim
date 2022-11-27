@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Carousel, ScrollingCarousel } from "@trendyol-js/react-carousel";
 import Content from "../Content/Content";
-import rate from '/public/static/imgaes/Group 12.svg';
-import img1 from '/public/static/imgaes/pexels-moose-photos-1587009 1.png';
-import img2 from '/public/static/imgaes/pexels-ali-pazani-2613260 1.png';
-import img3 from '/public/static/imgaes/pexels-daniel-xavier-1239288 1.png';
-import img4 from '/public/static/imgaes/pexels-moose-photos-1036622 1.png';
-import img5 from '/public/static/imgaes/pexels-diego-felipe-de-souza-1771999 1.png';
-import img6 from '/public/static/imgaes/pexels-mentatdgt-1024311 1.png';
+import rate from './public/static/imgaes/Group 12.svg';
+import img1 from './public/static/imgaes/pexels-moose-photos-1587009 1.png';
+import img2 from './public/static/imgaes/pexels-ali-pazani-2613260 1.png';
+import img3 from './public/static/imgaes/pexels-daniel-xavier-1239288 1.png';
+import img4 from './public/static/imgaes/pexels-moose-photos-1036622 1.png';
+import img5 from './public/static/imgaes/pexels-diego-felipe-de-souza-1771999 1.png';
+import img6 from './public/static/imgaes/pexels-mentatdgt-1024311 1.png';
 
 const Reviews = () => {
   const customerReviews1 = [
