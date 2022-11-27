@@ -41,8 +41,8 @@ const ContactForm = () => {
                 {name:"Email", type:"email", placeholder:"البريد الإلكتروني"},
                 {name:"Message", type:"text", placeholder:"الرسالة"}]
     return(
-        <div className='flex items-start flex-col justify-between md:mx-16 mx-12 md:mb-8'>
-            <h1 className='md:text-6xl text-5xl text-white md:mt-0 mt-32'>تواصل معنا</h1>
+        <div className='flex items-start flex-col justify-between md:mx-16 mx-14 md:mb-8'>
+            <h1 className='md:text-6xl text-5xl text-white md:mt-0 mt-52'>تواصل معنا</h1>
             <form onSubmit="" action="">
                 {InputInfo.map((item) => {return <Input id={item.name} type={item.type} placeholder={item.placeholder} />})}
             </form>
@@ -54,7 +54,7 @@ const Input = (props) => {
     
     return(
         <div className='md:my-12 my-12'>
-            <input className="bg-opacity-5 text-2xl border-b-2 border-solid border-r-0 border-t-0 border-l-0 border-b-white bg-gray-400 p-2 max-w-[500px] " id={props.id} type={props.type} placeholder={props.placeholder}/>
+            <input className="bg-opacity-5 text-2xl border-b-2 border-solid border-r-0 border-t-0 border-l-0 border-b-white bg-gray-400 p-2 min-w-[400px] " id={props.id} type={props.type} placeholder={props.placeholder}/>
         </div>
     )
 }
