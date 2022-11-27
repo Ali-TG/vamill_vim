@@ -6,11 +6,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        'home':"url('./src/assets/Background.png')",
-        'shop':"url('./src/assets/Shop.png')",
-        'about':"url('./src/assets/About.png')",
-        'contact':"url('./src/assets/ContactBackground.png')",
-        'footer': "url('./src/assets/Footer.png')"
+        'home':"url('/public/static/imgaes/Background.png')",
+        'shop':"url('/public/static/imgaes/Shop.png')",
+        'about':"url('/public/static/imgaes/About.png')",
+        'contact':"url('/public/static/imgaes/ContactBackground.png')",
+        'footer': "url('/public/static/imgaes/Footer.png')"
       }
     },
   },
